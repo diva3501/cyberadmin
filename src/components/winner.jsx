@@ -14,8 +14,8 @@ export default function Winner() {
       let cyberId = document.getElementById("cyberId").value;
       
 
-      console.log(cyberId)
-      setCyId("")
+      console.log(cyberId);
+      setCyId("");
 
 
     }
