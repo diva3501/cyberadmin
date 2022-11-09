@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div>
-        <Navbar/>
+        <Navbar id={k.id}/>
         <h1> {detail.name} </h1>
         <div className="container">
         <div class="outer">

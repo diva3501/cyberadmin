@@ -1,6 +1,11 @@
 import React from 'react'
 import './navbar.css'
-export default function navbar() {
+import data from "./data";
+
+export default function navbar(props) {
+    let id = props.id;
+    
+
   return (
     <div>
 
@@ -15,10 +20,10 @@ export default function navbar() {
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                     
                     <li class="nav-item">
-                        <a class="nav-link active" style={{color : 'black' }} aria-current="page" href="#">Verification</a>
+                        <a class="nav-link active" style={{color : 'black' }} aria-current="page" href={'/home/' + id}>Verification</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active"  style={{color : 'black'}} aria-current="page" href="#">Winners</a>
+                        <a class="nav-link active"  style={{color : 'black'}} aria-current="page" href={'/winner/' + id}>Winners</a>
                     </li>
                 </ul>
             </div>
