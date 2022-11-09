@@ -16,9 +16,17 @@ function  write (e) {
    console.log(name,contact,id)
   const db = getDatabase();
   set(ref(db, 'users/' + id), {
-    uid:id,
-    name:name,
-    contact:contact
+    UID:id,
+    Name:name,
+    Contact:contact,
+    isEntry:0,
+    PythonCoding:0,
+    PaperPresentation:0,
+    SoloCompile:0,
+    CaptureTheFlag:0,
+    OptimizeCoding:0,
+    isParticipate:0
+
 
 
   });
@@ -27,25 +35,14 @@ function  write (e) {
   setcontact("")
 
 }
-function get(val){
-  return document.getElementById(val).value;
 
-}
-function hi1(e){
-  setid(e.target.value)
-
-}
-function hi2(e){
-  setname(e.target.value)
-
-}
-function hi3(e){
-  setcontact(e.target.value)
-
+function prevent(e){
+  e.preventDefault();
 }
   return (
     <div>
-    
+       
+      <form onSubmit={prevent}>
       <label>Unique Id</label>
       <input type="number" value={id} onChange={(e)=>setid(e.target.value)} id="num"/>
       <br/>
@@ -55,7 +52,8 @@ function hi3(e){
       <label>Contact No</label>
       <input type="number" value={contact} onChange={(e)=>setcontact(e.target.value)} id="contact"/>
       <br/>
-        <button onClick={write}>jijo</button>
+      <button onClick={write}>Submit</button>
+      </form>
       
     </div>
   )

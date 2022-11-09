@@ -1,4 +1,7 @@
-let data = [{name : 'Python Coding',btnId : 'pythonCoding'},
-{name : 'Paper Presentation',btnId : 'paperPresentation'}]
+let data = [
+    {name : 'PythonCoding',btnId : 'PythonCoding'},
+   {name : 'Paper Presentation',btnId : 'paperPresentation'},
+  
+]
 
 export default data
