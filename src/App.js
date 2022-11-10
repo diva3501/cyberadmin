@@ -6,7 +6,9 @@ import Login from './components/login';
 import Winner from './components/winner';
 import Entry from './components/Entry';
 import Check from './components/Check';
-import Certificate from './components/Certificate';
+import Retrieve from './components/retrive';
+import CertificateParticipants from './components/certificateParticipants';
+import CertificateWinner from './components/certificate-winner';
 
 function App() {
   return (
@@ -18,6 +20,10 @@ function App() {
                     <Route path="/home/:id" element={<Home />} />
                     <Route path="/winner/:id" element={<Winner />} />
                     <Route path="/data" element={<Entry/>} />
+                    <Route path="/retrieve" element={<Retrieve/>} />
+
+                    <Route path="/certificate/participants" element={<CertificateParticipants/>} />
+                    <Route path="/certificate/winners" element={<CertificateWinner/>} />
 
                 </Routes>
             </Router>

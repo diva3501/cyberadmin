@@ -5,7 +5,7 @@ import { getDatabase, ref, child, get } from "firebase/database";
 
 export default function Retrieve() {
 
-    const [message, setMessage] = useState();
+    const [data, setData] = useState();
 
     useEffect(() => {
       console.log('trigger use effect hook');
@@ -15,10 +15,10 @@ export default function Retrieve() {
 
         //   console.log(snapshot.val());
             let x = snapshot.val();
-            let arr = Object.values(x)
-            console.log(arr)
-            setMessage(arr);
-            console.log(message)
+            let arr =Object.values(x)
+            // console.log(arr)
+            setData(arr);
+            
          
         
         } else {
@@ -31,7 +31,17 @@ export default function Retrieve() {
      
     },[])
 
-  return (
-    <div>Good</div>
+ if (data) return (
+    <div>
+        {
+        (data.map((data)=>{
+            return <div>
+              <p>{data.Name}</p>
+             
+              
+              <hr/>
+            </div>
+            }))}
+    </div>
   )
 }
