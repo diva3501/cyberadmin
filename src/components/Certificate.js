@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import {db} from "../firebase.js"
-import { getDatabase, ref, child, get } from "firebase/database";
-
+import { getDatabase,update, ref, child, get } from "firebase/database";
+import { useNavigate } from "react-router-dom";
+import "./Cert.css"
 export default function Certificate() {
   const [data,setdata]=useState()
-  const [allow,setallow]=useState(false)
+  const [allow,setallow]=useState()
 const dbRef = ref(getDatabase());
-
+const navigate = useNavigate();
 useEffect(() => {
   get(child(dbRef, 'users')).then((snapshot) => {
   
     if (snapshot.exists()) {
       let x=snapshot.val()
       let a = Object.values(x);
-     setdata(a)
+      setdata(a)
+      setallow()
 
     
      
@@ -23,23 +25,54 @@ useEffect(() => {
   }).catch((error) => {
     console.error(error);
   });
-}, [])
+}, [allow]) 
+function Suc(e){
+  let id=e.target.id
+  console.log(id)
+  update(ref(db,`/users/${id}`),{
+    isParticipate:2
+   }) 
+   setallow("hi")
+   
 
 
+  console.log(e.target.id)
+}
+function fail(e){
+  let id=e.target.id
+  console.log(id)
+  update(ref(db,`/users/${id}`),{
+    isParticipate:1
+   }) 
+   setallow("hi")
 
+}
 
 if(data) return (
-    <div>
+    <table>
+      
       {
        (data.map((data)=>{
-        return <div>
-          <p>{data.Name}</p>
+        if(data.isParticipate>=1) return <thead className={data.isParticipate == 2 ? "act":"norm"}>
+        <tr >
+          <td>{data.Name}</td>
+          <td>{data.PythonCoding=== 1 ? "YES":"NO"}</td>
+          <td>{data.SoloCompile=== 1 ? "YES":"NO"}</td>
+          <td>{data.PapperPresentation=== 1 ? "YES":"NO"}</td>
+          <td>{data.OptimizeCoding=== 1 ? "YES":"NO"}</td>
+          <td>{data.CaptureTheFlag=== 1 ? "YES":"NO"}</td>
+          <td> <button id={data.UID}  onClick={Suc}>Given</button></td>
+          <td><button id={data.UID} onClick={fail} >Not Given</button></td>
+          {console.log(data.isParticipate)}
+
          
+         </tr>
+         </thead>
           
-          <hr/>
-        </div>
+          
+       
         }))
       }
-    </div>
+    </table>
   )
 }
