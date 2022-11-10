@@ -6,6 +6,7 @@ import Login from './components/login';
 import Winner from './components/winner';
 import Entry from './components/Entry';
 import Check from './components/Check';
+import Certificate from './components/Certificate';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/winner/:id" element={<Winner />} />
                     <Route path="/data" element={<Entry/>} />
                     <Route path="/check" element={<Check/>} />
+                    <Route path="/certificate" element={<Certificate/>} />
 
                 </Routes>
             </Router>
