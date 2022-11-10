@@ -18,8 +18,6 @@ function App() {
                     <Route path="/home/:id" element={<Home />} />
                     <Route path="/winner/:id" element={<Winner />} />
                     <Route path="/data" element={<Entry/>} />
-                    <Route path="/check" element={<Check/>} />
-                    <Route path="/certificate" element={<Certificate/>} />
 
                 </Routes>
             </Router>
