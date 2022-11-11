@@ -12,9 +12,7 @@ export default function Login() {
         let password = document.getElementById('password').value;
         let id = 0;
         console.log(username,password)
-        if(username == 'certificate' && password=='234328'){
-          navigate('/certificate/participants')
-        }
+        
 
         if(username == 'attendance' && password=='234328' ){
           id=1
@@ -49,6 +47,9 @@ export default function Login() {
       id=6
       console.log(id);
       navigate('/home/' + id)
+  }
+  else if(username == 'certificate' && password=='234328'){
+    navigate('/certificate/participants')
   }
   else{
     alert("Enter valid detail 🤦‍♂️🤦🤦‍♂️")

@@ -122,7 +122,7 @@ export default function CertificateWinner() {
        
       // },[data])
 
-      if (data && detail) return  (
+      if (data) return  (
     <div>
         <Navbar1/>
         <div className="container" style={{marginTop : '10%'}}>
