@@ -47,9 +47,9 @@ export default function Winner() {
         <h1>{detail.name}</h1>
         
         <div className="container">
-        <div class="outer">
+        <div class="outer" >
             <h2 style={{textAlign : 'center'}}>Winners</h2>
-            <div class="input-group mb-3 w-75 input">
+            <div class="input-group mb-3 w-75 input" style={{marginLeft:"auto",marginRight:"auto"}}>
               <input
                 type="text"
                 class="form-control"

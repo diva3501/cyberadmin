@@ -56,7 +56,8 @@ if(data) return (
   <div>
 
      <Navbar1/>
-     <Table striped bordered hover className='certtb'>
+    <div className="container">
+    <Table striped bordered hover className='certtb'>
      <thead>
         <tr>
           <th>Unique Id</th>
@@ -96,6 +97,7 @@ if(data) return (
         }))
       }
     </Table>
+    </div>
 
     </div>
   )
