@@ -2,6 +2,8 @@ import React from 'react'
 import  "../firebase.js"
 import { getDatabase, ref, set } from "firebase/database";
 import { useState } from 'react';
+import "./Cert.css"
+import Button from 'react-bootstrap/Button';
 
 
 export default function Database() {
@@ -12,8 +14,9 @@ function  write (e) {
   
   
    
+    if(name.length !=0 && contact.length!=0 && id.length!=0){
+      console.log(name,contact,id)
 
-   console.log(name,contact,id)
   const db = getDatabase();
   set(ref(db, 'users/' + id), {
     UID:id,
@@ -35,25 +38,32 @@ function  write (e) {
   setcontact("")
 
 }
+else{
+  alert("enter valid details")
+}
 
+
+    }
+   
 function prevent(e){
   e.preventDefault();
 }
   return (
     <div>
-       
-      <form onSubmit={prevent}>
-      <label>Unique Id</label>
-      <input type="number" value={id} onChange={(e)=>setid(e.target.value)} id="num"/>
+       <h1>DATA ENTRY</h1>
+      <form onSubmit={prevent} className="totfrm">
+     
+      <input required placeholder='Enter Unique Id' type="number" value={id} onChange={(e)=>setid(e.target.value)} className="frm fo" id="num"/>
       <br/>
-      <label>Name</label>
-      <input type="text" value={name} onChange={(e)=>setname(e.target.value)} id="name"/>
+      
+      <input required placeholder='Enter Name' type="text" value={name} onChange={(e)=>setname(e.target.value)} className="frm ft" id="name"/>
       <br/>
-      <label>Contact No</label>
-      <input type="number" value={contact} onChange={(e)=>setcontact(e.target.value)} id="contact"/>
+      
+      <input required placeholder='Enter Contact Number' type="number" value={contact} onChange={(e)=>setcontact(e.target.value)} className="frm fth" id="contact"/>
       <br/>
-      <button onClick={write}>Submit</button>
+      <button className='btn ent' variant="primary" onClick={write}>Submit</button>
       </form>
+     
       
     </div>
   )

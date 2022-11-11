@@ -13,3 +13,23 @@
 .t{
     background-color: rgba(238, 44, 44, 0.873);
 }
+.totfrm{
+    border: solid;
+    height: 300px;
+    width: 50%;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 10%;
+    border-radius: 30px;
+    padding-top:3% ;
+}
+.frm{
+    height:40px;
+    width:250px;
+    margin-top: 2%;
+}
+.ent{
+    background-color: rgb(6, 126, 231);
+    color: white;
+    margin-top:2% ;
+}

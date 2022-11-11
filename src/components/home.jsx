@@ -33,6 +33,7 @@ export default function Home() {
              }
              else if(event=="PaperPresentation")
             {
+                console.log("jojoj")
                 update(ref(db,`/users/${id}`),
                 {
                   PaperPresentation:1,

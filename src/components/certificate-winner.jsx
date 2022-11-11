@@ -40,7 +40,7 @@ export default function CertificateWinner() {
                   
                   } else {
                     console.log("No data available");
-                    alert("No data available")
+                  
                   }
                 }).catch((error) => {
                   console.error(error);
@@ -124,7 +124,7 @@ export default function CertificateWinner() {
        
       // },[data])
 
-      if (data && detail) return  (
+      if (detail) return  (
     <div>
         <Navbar1/>
         <div className="container" style={{marginTop : '10%'}}>
@@ -149,7 +149,7 @@ export default function CertificateWinner() {
   </thead>
   <tbody>
 
-        {console.log(detail)}
+        {console.log(detail[0])}
     
   </tbody>
 </table>

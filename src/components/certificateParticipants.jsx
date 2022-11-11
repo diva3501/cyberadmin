@@ -54,6 +54,7 @@ function fail(e){
 
 if(data) return (
   <div>
+
      <Navbar1/>
      <Table striped bordered hover className='certtb'>
      <thead>
