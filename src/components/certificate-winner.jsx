@@ -7,6 +7,11 @@ import { getDatabase, ref, child, get } from "firebase/database";
 export default function CertificateWinner() {
 
     const [data, setData] = useState();
+    
+    const [name1,setName1] = useState("-");
+    const [name2,setName2] = useState("-");
+    const [name3,setName3] = useState("-");
+    
     const [detail,setDetail] = useState();
     const [option,setOption] = useState('python-coding');
 
@@ -21,34 +26,49 @@ export default function CertificateWinner() {
               let arr =Object.values(x)
             //   console.log(arr)
               setData(arr);
+
+              const dbRef = ref(getDatabase());
               let arrName = []
+              let arrobj = []
               for(let i=0;i<3;i++){
                 get(child(dbRef, `users/${arr[i]}`)).then((snapshot) => {
                   if (snapshot.exists()) {
           
                   //   console.log(snapshot.val());
                       let x = snapshot.val();
-                      let arr1 =Object.values(x)
+                      let arr1 =Object.values(x);
                       let obj = {
                         id : arr[i],
                         name : arr1[2]
                       }
-                      arrName.push(obj)
+                      if(i==0){
+                        setName1(arr1[2])
+                      }
+                      else if(i==1){
+                        setName2(arr1[2])
+                      }
+                      else{
+                        setName3(arr1[2])
+                      }
+
+                      arrobj.push(obj)
+                      arrName.push(arr1[2])
                       
-                      
-                   
+                      setDetail(arrobj)
+                      // setName(arrName)
                   
                   } else {
                     console.log("No data available");
-                    alert("No data available")
+                    // alert("No data available")
                   }
+                 
                 }).catch((error) => {
                   console.error(error);
                 });
               }
-              setDetail(arrName)
               
-           
+              
+  
           
           } else {
             console.log("No data available");
@@ -60,76 +80,29 @@ export default function CertificateWinner() {
        
       },[option])
 
+    
+
 
       const getName = ()=>{
+       
+
         console.log(data)
         console.log(detail)
+        // console.log(name)
       }
 
-      // const getName = ()=>{
-      //   console.log(data)
-      //   console.log(option)
-
-      //   console.log('trigger User Click');
-      //   const dbRef = ref(getDatabase());
-      //   let arrName = []
-      //   for(let i=0;i<3;i++){
-      //   get(child(dbRef, `users/${data[i]}`)).then((snapshot) => {
-      //     if (snapshot.exists()) {
-  
-      //     //   console.log(snapshot.val());
-      //         let x = snapshot.val();
-      //         let arr =Object.values(x)
-      //         arrName.push(arr[2])
-              
-              
-           
-          
-      //     } else {
-      //       console.log("No data available");
-      //       alert("No data available")
-      //     }
-      //   }).catch((error) => {
-      //     console.error(error);
-      //   });
-      // }
       
-      // setName(arrName);
 
 
-      // }
-
-      // useEffect(() => {
-      //   console.log('trigger use effect hook');
-      //   const dbRef = ref(getDatabase());
-      //   for(let i=0;i<3;i++){
-      //   get(child(dbRef, `users/${data[i]}`)).then((snapshot) => {
-      //     if (snapshot.exists()) {
-  
-      //     //   console.log(snapshot.val());
-      //         let x = snapshot.val();
-      //         let arrName =Object.values(x)
-      //         console.log(arrName)
-      //         // setData(arr);
-              
-           
-          
-      //     } else {
-      //       console.log("No data available");
-      //     }
-      //   }).catch((error) => {
-      //     console.error(error);
-      //   });
-      // }
-       
-      // },[data])
-
-      if (data && detail) return  (
+      if (data ) return  (
     <div>
         <Navbar1/>
         <div className="container" style={{marginTop : '10%'}}>
         <select class="form-select" onChange={(e)=>{
             setOption(e.target.value)
+            setName1("-")
+            setName2("-")
+            setName3("-")
          
         }} aria-label="Default select example">
  
@@ -149,7 +122,29 @@ export default function CertificateWinner() {
   </thead>
   <tbody>
 
-        {console.log(detail)}
+        <tr>
+          <td>1</td>
+          <td>{data[0]}</td>
+          <td>{name1}</td>
+
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>{data[1]}</td>
+          <td>{name2}</td>
+
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td>{data[2]}</td>
+          <td>{name3}</td>
+
+        </tr>
+        
+       
+
     
   </tbody>
 </table>
