@@ -67,6 +67,30 @@ export default function Home() {
                   isParticipate:1
                 })
              }
+             else if(event=="Connections")
+            {
+                update(ref(db,`/users/${id}`),
+                {
+                  Connections:1,
+                  isParticipate:1
+                })
+             }
+             else if(event=="ShipWreck")
+            {
+                update(ref(db,`/users/${id}`),
+                {
+                  ShipWreck:1,
+                  isParticipate:1
+                })
+             }
+             else if(event=="TreasureHunt")
+            {
+                update(ref(db,`/users/${id}`),
+                {
+                  TreasureHunt:1,
+                  isParticipate:1
+                })
+             }
            
             
         }

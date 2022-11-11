@@ -37,18 +37,19 @@ export default function CertificateWinner() {
                   //   console.log(snapshot.val());
                       let x = snapshot.val();
                       let arr1 =Object.values(x);
+                      console.log(arr1)
                       let obj = {
                         id : arr[i],
                         name : arr1[2]
                       }
                       if(i==0){
-                        setName1(arr1[2])
+                        setName1(arr1[6])
                       }
                       else if(i==1){
-                        setName2(arr1[2])
+                        setName2(arr1[6])
                       }
                       else{
-                        setName3(arr1[2])
+                        setName3(arr1[6])
                       }
 
                       arrobj.push(obj)
@@ -72,6 +73,7 @@ export default function CertificateWinner() {
           
           } else {
             console.log("No data available");
+            alert("No data available")
           }
         }).catch((error) => {
           console.error(error);
@@ -138,6 +140,9 @@ export default function CertificateWinner() {
  <option value="paper-presentation">Paper Presentation</option>
  <option value="optimized-coding">Optimized Coding</option>
  <option value="solo-compile">Solo Compile</option>
+ <option value="connections">Connections</option>
+ <option value="ship-wreck">Ship Wreck</option>
+ <option value="treasure-hunt">Treasure Hunt</option>
 </select>
    
 

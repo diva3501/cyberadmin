@@ -65,10 +65,13 @@ if(data) return (
           <th>Python Coding</th>
           <th>Solo Compile</th>
           <th>Papper Presentation</th>
-          <th>Papper Presentation</th>
-          <th>Papper Presentation</th>
-          <th>Papper Presentation</th>
-          <th>Papper Presentation</th>
+          <th>Optimized Coding</th>
+          <th>Capture the flag</th>
+          <th>Connections</th>
+          <th>Ship wreck</th>
+          <th>Treasure Hunt</th>
+          <th>Certify</th>
+          <th>Remove</th>
 
         </tr>
       </thead>
@@ -83,6 +86,9 @@ if(data) return (
           <td>{data.PapperPresentation=== 1 ? "YES":"NO"}</td>
           <td>{data.OptimizeCoding=== 1 ? "YES":"NO"}</td>
           <td>{data.CaptureTheFlag=== 1 ? "YES":"NO"}</td>
+          <td>{data.Connections=== 1 ? "YES":"NO"}</td>
+          <td>{data.ShipWreck=== 1 ? "YES":"NO"}</td>
+          <td>{data.TreasureHunt=== 1 ? "YES":"NO"}</td>
           <td> <button className='btn o' id={data.UID}  onClick={Suc}>Given</button></td>
           <td><button className='btn t' id={data.UID} onClick={fail} >Not Given</button></td>
         
