@@ -108,7 +108,8 @@ export default function CertificateWinner() {
  
  <option value="python-coding">Python Coding</option>
  <option value="paper-presentation">Paper Presentation</option>
- <option value="3">Good</option>
+ <option value="optimized-coding">Optimized Coding</option>
+ <option value="solo-compile">Solo Compile</option>
 </select>
    
 

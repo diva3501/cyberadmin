@@ -59,8 +59,7 @@ export default function Login() {
  <h1 style={{textAlign : 'center'}}>ADMIN LOGIN</h1>
 <div class="container div1">
       <div class="row">
-        <div class="feature-box col-7"></div>
-
+       
 
         <div class="login col-5">
           <div class="outer">

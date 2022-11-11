@@ -11,9 +11,10 @@ h1 {
 }
 
 .feature-box {
-  content: url(https://survicate.com/wp-content/uploads/2019/05/PMs-1.png);
+  content: url("https://th.bing.com/th/id/OIP.fMZwCAaBPntZ1NmSRhU6MQHaHa?pid=ImgDet&rs=1");
     padding: 2%;
-    height: 750px ;
+    height: 250px ;
+    width: 250px;
     bottom: 100px;
     position: relative;
 }
@@ -25,13 +26,14 @@ h1 {
 
     box-shadow: 10px 10px lightblue;
 
-    margin-left: 50px;
-    margin-top: 100px;
+    margin-top: 10%;
     padding: 3%;
     width: auto;
 }
 
 .login {
+    margin-left: auto;
+    margin-right: auto;
   
 }
 
