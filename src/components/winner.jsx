@@ -17,6 +17,7 @@ export default function Winner() {
     console.log(detail.name)
 
     function assertWinner(){
+    if(cyId1.length!=0 && cyId2.length!=0 && cyId3.length!=0){
       const db = getDatabase();
 
       set(ref(db, 'winner/' + dbName), {
@@ -31,6 +32,11 @@ export default function Winner() {
       setCyId1("");
       setCyId2("");
       setCyId3("");
+
+    }
+    else{
+      alert("Enter valid details")
+    }
     }
 
 

@@ -21,7 +21,7 @@ export default function Check() {
                })
         }
         else {
-            console.log("No data available");
+            console.log("No data available 🤷‍♂🤷‍♂");
         }
 }).catch((error) => {
   console.error(error);

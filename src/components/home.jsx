@@ -18,10 +18,13 @@ export default function Home() {
         console.log(id)
         console.log("hi",event)
       
+       if(id.length!=0){
         const dbRef = ref(getDatabase());
         get(child(dbRef, `users/${id}`)).then((snapshot) => {
         if (snapshot.exists()) {
             const db = getDatabase();
+            alert("Success 👌👌👌👌")
+            
             if(event=="PythonCoding")
             {
               console.log("hi")
@@ -68,12 +71,16 @@ export default function Home() {
             
         }
         else {
-            console.log("No data available");
+            alert("No data available 🤷‍♂🤷‍♂")
         }
 }).catch((error) => {
   console.error(error);
 });
 
+       }
+       else{
+        alert("Enter valid detail 😒😒😒")
+       }
 
 setid("")
 

@@ -178,7 +178,7 @@ export default function CertificateWinner() {
   </tbody>
 </table>
 
-<button onClick={getName} >Click Me</button>
+
 
 </div>
     </div>

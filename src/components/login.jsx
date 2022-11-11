@@ -12,40 +12,46 @@ export default function Login() {
         let password = document.getElementById('password').value;
         let id = 0;
         console.log(username,password)
-        if(username == 'certificate' && password=='12345'){
+        if(username == 'certificate' && password=='234328'){
           navigate('/certificate/participants')
         }
 
-        if(username == 'attendance' && password=='12345' ){
+        if(username == 'attendance' && password=='234328' ){
           id=1
           console.log(id);
           navigate('/home/' + id)
       }
 
-      else if(username == 'pyadmin' && password=='12345' ){
+      else if(username == 'pyadmin' && password=='234328' ){
             id=2
             console.log(id);
             navigate('/home/' + id)
         }
-        else if(username == 'papadmin' && password=='12345'){
+        else if(username == 'papadmin' && password=='234328'){
             id=3
             console.log(id);
             navigate('/home/' + id)
         }
-        else if(username == 'optiadmin' && password=='12345'){
+        else if(username == 'optiadmin' && password=='234328'){
           id=4
           console.log(id);
           navigate('/home/' + id)
       }
-      else if(username == 'soloadmin' && password=='12345'){
+      else if(username == 'soloadmin' && password=='234328'){
         id=5
         console.log(id);
         navigate('/home/' + id)
     }
-    else if(username == 'surprise' && password=='12345'){
+      else if(username == 'entry' && password=='234328'){
+        navigate('/data')
+    }
+    else if(username == 'surprise' && password=='234328'){
       id=6
       console.log(id);
       navigate('/home/' + id)
+  }
+  else{
+    alert("Enter valid detail 🤦‍♂️🤦🤦‍♂️")
   }
         
 
