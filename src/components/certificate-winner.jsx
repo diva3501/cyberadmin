@@ -7,7 +7,7 @@ import { getDatabase, ref, child, get } from "firebase/database";
 export default function CertificateWinner() {
 
     const [data, setData] = useState();
-    const [name,setName] = useState();
+    const [detail,setDetail] = useState();
     const [option,setOption] = useState('python-coding');
 
     useEffect(() => {
@@ -46,7 +46,7 @@ export default function CertificateWinner() {
                   console.error(error);
                 });
               }
-              setName(arrName)
+              setDetail(arrName)
               
            
           
@@ -62,8 +62,8 @@ export default function CertificateWinner() {
 
 
       const getName = ()=>{
-        // console.log(data)
-        console.log(name)
+        console.log(data)
+        console.log(detail)
       }
 
       // const getName = ()=>{
@@ -124,7 +124,7 @@ export default function CertificateWinner() {
        
       // },[data])
 
-      if (data) return  (
+      if (data && detail) return  (
     <div>
         <Navbar1/>
         <div className="container" style={{marginTop : '10%'}}>
@@ -144,28 +144,13 @@ export default function CertificateWinner() {
     <tr>
       <th scope="col">Place</th>
       <th scope="col">Cyber ID</th>
-     
+      <th scope="col">Name</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      
-      <td>First</td>
-      <td>Otto</td>
-      
-    </tr>
-    <tr>
-     
-      <td>Second</td>
-      <td>Thornton</td>
-      
-    </tr>
-    <tr>
-  
-      <td>Third</td>
-      <td>the Bird</td>
-      
-    </tr>
+
+        {console.log(detail)}
+    
   </tbody>
 </table>
 
