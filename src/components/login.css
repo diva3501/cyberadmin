@@ -6,9 +6,6 @@ h1 {
   padding: 1%;
 }
 
-.div1 {
-  padding-bottom: 3%;
-}
 
 .feature-box {
   content: url("https://th.bing.com/th/id/OIP.fMZwCAaBPntZ1NmSRhU6MQHaHa?pid=ImgDet&rs=1");
@@ -26,171 +23,36 @@ h1 {
 
     box-shadow: 10px 10px lightblue;
 
-    margin-top: 10%;
+    margin-top: 5%;
     padding: 3%;
     width: auto;
 }
 
-.login {
-    margin-left: auto;
-    margin-right: auto;
-  
-}
 
 
-.div1{
-    padding: 3% 5% 3%;
-}
 
 .input{
-    margin: 4% auto 4%;
+    margin-left: auto;
+    margin-right: auto; 
     padding: 2%;
 
 }
 
-.forgot{
-    margin-left: 30px
-}
-
-.txt{
-    color: #2FF3E0;
-    font-weight: 600;
-}
-
-.txt1{
-    margin-left: 50px;
-    color: #2FF3E0;
-    font-weight: 600;
-}
-
-
-.btn-login{
-    margin-left: 45%;
-    
-}
-
-.buton{
-    background-color: #2FF3E0;
-    margin: 2%;
-    border-radius: 25px;
-
-}
-
-.buton1{
-    background-color: #2FF3E0;
-    margin-top: 50px;
-}
-
-
-.outer1{
-    border: 2px solid ;
-    border-color: #484646;
-    border-radius: 25px;
-
-    box-shadow: 10px 10px lightblue;
-
-    margin: 100px auto;
-    padding: 3%;
-    width: 600px;
-    height: auto;
-}
-
-.signup-img{
-    content: url(https://th.bing.com/th/id/OIP.0FaIXY2II1aEnHSjeuOy0QHaDj?w=295&h=167&c=7&r=0&o=5&dpr=1.25&pid=1.7);
-}
-
-.forgot-img{
-    content: url(https://media.istockphoto.com/photos/man-thinking-with-red-question-marks-picture-id477404054?b=1&k=20&m=477404054&s=170667a&w=0&h=ifk3VRrZ4cEuPsZJg1Gh26vWz0COJCeM8ex_WPEU0Y0=);
-    height: 55%;
-    width: 55%;
-
-}
-
-
-.outer2{
-    border: 2px solid ;
-    border-color: #484646;
-    border-radius: 25px;
-
-    box-shadow: 10px 10px lightblue;
-
-    margin: 180px auto;
-    padding: 3%;
-    width: 600px;
-    height: auto;
-}
-
-.addWallet-img{
-    
-    content: url(https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1651292747891x867845520871514600%2F10_Walllet_How-much-money-can-be-added-to-the-Paytm-wallet_option2.jpg?w=768&h=513&auto=compress&dpr=1.25&fit=max);
-    height: 550px;
-    width: 750px;
-    margin-top: 3%;
-
-}
-
-
-.outer3{
-    border: 2px solid ;
-    border-color: #484646;
-    border-radius: 25px;
-
-    box-shadow: 10px 10px lightblue;
-
-    margin: 50px auto;
-    padding: 3%;
-    width: 600px;
-    height: auto;
-    margin-top: 25%;
-}
 
 
 a{
     text-decoration: none;
 }
 
-.outer4{
-    border: 2px solid ;
-    border-color: #484646;
-    border-radius: 25px;
 
-    box-shadow: 10px 10px lightblue;
-
-    margin: 50px auto;
-    padding: 3%;
-    width: 600px;
-    height: auto;
-    margin-top: 32%;
+.navbar-toggler{
+    outline: solid;
+    border: solid;
+      box-shadow: none;
+      opacity: 1;
+  }
+.login{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
 }
-
-.outer5{
-    border: 2px solid ;
-    border-color: #484646;
-    border-radius: 25px;
-
-    box-shadow: 10px 10px lightblue;
-
-    margin: 50px auto;
-    padding: 3%;
-    width: 600px;
-    height: auto;
-    margin-top: 3%;
-}
-
-
-.home-img{
-    content: url(https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fs3.amazonaws.com%2Fappforest_uf%2Ff1651293030348x678694453614492500%2F1560877246-9155.webp?w=768&h=478&auto=compress&fit=crop&dpr=1.25);
-    margin-top: 5%;
-    height: 400px;
-    
-    
-}
-
-.payments-img{
-    content: url(https://th.bing.com/th/id/OIP.A6je5Xwi5vDj3UX_TSuS1AAAAA?pid=ImgDet&w=195&h=195&c=7&dpr=1.25);
-    height: 300px;
-    width: 400px;
-    margin: 9% auto;
-
-}
-

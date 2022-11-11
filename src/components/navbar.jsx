@@ -9,9 +9,9 @@ export default function navbar(props) {
   return (
     <div>
 
-<nav className="navbar navbar-expand-lg bg-light">
+<nav className="navbar navbar-expand-sm  bg-light">
         <div className="container-fluid">
-            <a className="navbar-brand" href="#">CYBER ADMIN</a>
+            <a className="navbar-brand" href="/">CYBER ADMIN</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
