@@ -14,9 +14,9 @@ export default function Login() {
     console.log(username, password);
 
     if (username == "attendance" && password == "234328") {
-      id = 1;
+      
       console.log(id);
-      navigate("/home/" + id);
+      navigate("/attendance");
     } else if (username == "pyadmin" && password == "234328") {
       id = 2;
       console.log(id);
