@@ -90,7 +90,7 @@ setid("")
         <div className="outer">
             <h2 style={{textAlign : 'center'}}>Verification</h2>
             <div className="input-group mb-3 w-75 input">
-             <form onSubmit={prevent}>
+             
              <input
                 type="text"
                 className="form-control"
@@ -99,12 +99,14 @@ setid("")
                 value={id}
                 onChange={(e)=>{setid(e.target.value)}}
               />
-              <div className="d-grid gap-2 col-6 mx-auto buton">
-                <button className="btn btn-info buton " id={detail.btnId} onClick={verifyUser} style={{color:'white'}} > Login </button> 
+              </div>
+              
+              <div className="d-grid gap-2 col-6 mx-auto button">
+                <button className="btn btn-info buton " id={detail.btnId} onClick={verifyUser} style={{color:'white'}} > Verify </button> 
                 
               </div>
-             </form>
-            </div>
+            
+            
 
            
            

@@ -12,16 +12,44 @@ export default function Login() {
         let password = document.getElementById('password').value;
         let id = 0;
         console.log(username,password)
-        if(username == 'pyadmin' && password=='12345' ){
-            id=1
+        if(username == 'certificate' && password=='12345'){
+          navigate('/certificate/participants')
+        }
+
+        if(username == 'attendance' && password=='12345' ){
+          id=1
+          console.log(id);
+          navigate('/home/' + id)
+      }
+
+      else if(username == 'pyadmin' && password=='12345' ){
+            id=2
+            console.log(id);
+            navigate('/home/' + id)
         }
         else if(username == 'papadmin' && password=='12345'){
-            id=2
+            id=3
+            console.log(id);
+            navigate('/home/' + id)
         }
-        
-
+        else if(username == 'optiadmin' && password=='12345'){
+          id=4
+          console.log(id);
+          navigate('/home/' + id)
+      }
+      else if(username == 'soloadmin' && password=='12345'){
+        id=5
         console.log(id);
         navigate('/home/' + id)
+    }
+    else if(username == 'surprise' && password=='12345'){
+      id=6
+      console.log(id);
+      navigate('/home/' + id)
+  }
+        
+
+       
        
     }
 
@@ -31,8 +59,7 @@ export default function Login() {
  <h1 style={{textAlign : 'center'}}>ADMIN LOGIN</h1>
 <div class="container div1">
       <div class="row">
-        <div class="feature-box col-7"></div>
-
+       
 
         <div class="login col-5">
           <div class="outer">
