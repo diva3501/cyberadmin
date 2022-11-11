@@ -15,7 +15,7 @@ export default function Navbar1() {
                 <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
                     
                     <li className="nav-item">
-                        <a className="nav-link active" style={{color : 'black' }} aria-current="page" href={'/certificate/participants'}>Verification</a>
+                        <a className="nav-link active" style={{color : 'black' }} aria-current="page" href={'/certificate/participants'}>Participants</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link active"  style={{color : 'black'}} aria-current="page" href={'/certificate/winners' }>Winners</a>
