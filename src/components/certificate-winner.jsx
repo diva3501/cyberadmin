@@ -11,6 +11,10 @@ export default function CertificateWinner() {
     const [name1,setName1] = useState("-");
     const [name2,setName2] = useState("-");
     const [name3,setName3] = useState("-");
+
+    const [clgname1,setClgName1] = useState("-");
+    const [clgname2,setClgName2] = useState("-");
+    const [clgname3,setClgName3] = useState("-");
     
     const [detail,setDetail] = useState();
     const [option,setOption] = useState('python-coding');
@@ -44,12 +48,15 @@ export default function CertificateWinner() {
                       }
                       if(i==0){
                         setName1(arr1[6])
+                        setClgName1(arr1[2])
                       }
                       else if(i==1){
                         setName2(arr1[6])
+                        setClgName2(arr1[2])
                       }
                       else{
                         setName3(arr1[6])
+                        setClgName3(arr1[2])
                       }
 
                       arrobj.push(obj)
@@ -133,6 +140,9 @@ export default function CertificateWinner() {
             setName1("-")
             setName2("-")
             setName3("-")
+            setClgName1("-")
+            setClgName2("-")
+            setClgName3("-")
          
         }} aria-label="Default select example">
  
@@ -143,6 +153,7 @@ export default function CertificateWinner() {
  <option value="connections">Connections</option>
  <option value="ship-wreck">Ship Wreck</option>
  <option value="treasure-hunt">Treasure Hunt</option>
+ <option value="capture-the-flag">Capture the flag</option>
 </select>
    
 
@@ -152,6 +163,7 @@ export default function CertificateWinner() {
       <th scope="col">Place</th>
       <th scope="col">Cyber ID</th>
       <th scope="col">Name</th>
+      <th scope="col">College</th>
     </tr>
   </thead>
   <tbody>
@@ -160,6 +172,7 @@ export default function CertificateWinner() {
           <td>1</td>
           <td>{data[0]}</td>
           <td>{name1}</td>
+          <td>{clgname1}</td>
 
         </tr>
 
@@ -167,14 +180,14 @@ export default function CertificateWinner() {
           <td>2</td>
           <td>{data[1]}</td>
           <td>{name2}</td>
-
+          <td>{clgname2}</td>
         </tr>
 
         <tr>
           <td>3</td>
           <td>{data[2]}</td>
           <td>{name3}</td>
-
+          <td>{clgname3}</td>
         </tr>
         
        
