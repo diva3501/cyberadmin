@@ -60,7 +60,7 @@ export default function Home() {
                 })
              }
             else if(event=="OptimizeCoding")
-            {
+            {   console.log("triggered")
                 update(ref(db,`/users/${id}`),
                 {
                   OptimizeCoding:1,

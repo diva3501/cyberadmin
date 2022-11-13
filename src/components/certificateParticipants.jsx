@@ -62,9 +62,10 @@ if(data) return (
         <tr>
           <th>Unique Id</th>
           <th>Name</th>
+          <th>College</th>
           <th>Python Coding</th>
           <th>Solo Compile</th>
-          <th>Papper Presentation</th>
+          <th>Paper Presentation</th>
           <th>Optimized Coding</th>
           <th>Capture the flag</th>
           <th>Connections</th>
@@ -81,9 +82,10 @@ if(data) return (
         <tr >
           <td>{data.UID}</td>
           <td>{data.Name}</td>
+          <td>{data.College}</td>
           <td>{data.PythonCoding=== 1 ? "YES":"NO"}</td>
           <td>{data.SoloCompile=== 1 ? "YES":"NO"}</td>
-          <td>{data.PapperPresentation=== 1 ? "YES":"NO"}</td>
+          <td>{data.PaperPresentation=== 1 ? "YES":"NO"}</td>
           <td>{data.OptimizeCoding=== 1 ? "YES":"NO"}</td>
           <td>{data.CaptureTheFlag=== 1 ? "YES":"NO"}</td>
           <td>{data.Connections=== 1 ? "YES":"NO"}</td>

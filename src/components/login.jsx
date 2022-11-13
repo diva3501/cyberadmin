@@ -47,7 +47,12 @@ export default function Login() {
       id = 8;
       console.log(id);
       navigate("/home/" + id);
-    } else if (username == "certificate" && password == "234328") {
+    }else if (username == "capadmin" && password == "234328") {
+      id = 9;
+      console.log(id);
+      navigate("/home/" + id);
+    } 
+    else if (username == "certificate" && password == "234328") {
       navigate("/certificate/participants");
     } else {
       alert("Enter valid detail 🤦‍♂️🤦🤦‍♂️");
