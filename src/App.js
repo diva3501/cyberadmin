@@ -23,7 +23,6 @@ function App() {
                     <Route path="/data" element={<Entry/>} />
                     <Route path="/retrieve" element={<Retrieve/>} />
                     <Route path="/attendance" element={<Verification/>} />
-
                     <Route path="/certificate/participants" element={<CertificateParticipants/>} />
                     <Route path="/certificate/winners" element={<CertificateWinner/>} />
 

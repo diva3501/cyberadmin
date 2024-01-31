@@ -2,13 +2,14 @@
 import { initializeApp } from "firebase/app";
 import {getDatabase} from "firebase/database"
 const firebaseConfig = {
-  apiKey: "AIzaSyBy7HeWUOa729KJFVt--zz8rIIizt1x9VM",
-  authDomain: "cyberadmin-e5ed7.firebaseapp.com",
-  projectId: "cyberadmin-e5ed7",
-  storageBucket: "cyberadmin-e5ed7.appspot.com",
-  messagingSenderId: "541232109524",
-  appId: "1:541232109524:web:545cd0b33fdf0e35f4a841",
-  measurementId: "G-C1XZJ3KVRG"
+  apiKey: "AIzaSyAnbY7MXL3JUZwa14QxJmU4vDIHzCOc0hg",
+  authDomain: "cybernautix.firebaseapp.com",
+  databaseURL: "https://cybernautix-default-rtdb.firebaseio.com",
+  projectId: "cybernautix",
+  storageBucket: "cybernautix.appspot.com",
+  messagingSenderId: "1018018853789",
+  appId: "1:1018018853789:web:bbf36a3af9c55e96167574",
+  measurementId: "G-VHHGBHH2CL"
 };
 
 const app = initializeApp(firebaseConfig);
