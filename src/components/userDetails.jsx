@@ -53,7 +53,8 @@ export default class UserDetails extends React.Component{
                             <td>{row.data.email}</td>
                             <td>{row.data.phoneNumber}</td>
                             <td>{row.data.technicalEvents ? row.data.technicalEvents.join(', ') : 'N/A'}</td>
-                            <td>{row.data.nonTechnicalEvents}</td>
+                            <td>{row.data.nonTechnicalEvents ? row.data.nonTechnicalEvents.join(', ') : 'N/A'}</td>
+                           
                         </tr>
                     )
                    } )}
