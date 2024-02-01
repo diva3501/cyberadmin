@@ -10,7 +10,8 @@ import Retrieve from './components/retrive';
 import CertificateParticipants from './components/certificateParticipants';
 import CertificateWinner from './components/certificate-winner';
 import Verification from './components/Verification';
-
+import UserDetails from './components/userDetails';
+import 'bootstrap/dist/css/bootstrap.min.css'; //changes done
 function App() {
   return (
     <div className="App">
@@ -25,6 +26,7 @@ function App() {
                     <Route path="/attendance" element={<Verification/>} />
                     <Route path="/certificate/participants" element={<CertificateParticipants/>} />
                     <Route path="/certificate/winners" element={<CertificateWinner/>} />
+                    <Route path="/userDetails" element={<UserDetails/>} />
 
                 </Routes>
             </Router>
