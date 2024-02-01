@@ -47,7 +47,7 @@ export default class UserDetails extends React.Component{
                    {
                     return(
                         <tr>
-                            <td>{index}</td>
+                            <td>{index+1}</td>
                             <td>{row.data.name}</td>
                             <td>{row.data.college}</td>
                             <td>{row.data.email}</td>
